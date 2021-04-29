@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatViewInflater
+import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,19 +16,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object{
-
-        const val Info_Extra_Nome = "Nome"
+        val Info_Extra_Nome = "Nome"
+        val Info_Extra_Mail = "Mail"
 
     }
 
-    fun mostrarDados(view: View){
+    fun mostrarDados(view: View) {
 
-        val editTextName = findViewById<EditText>(R.id.editTextTextPersonName)
-        val nome = editTextName.text.toString()
+        val TextInputEditNome = findViewById<EditText>(R.id.TextInputEditNome)
+        val nome = TextInputEditNome.text.toString()
 
-        val intent = Intent(this, MostrarDados::class.java).apply {
+        val TextInputEditMail = findViewById<EditText>(R.id.TextInputEditMail)
+        val mail = TextInputEditMail.text.toString()
 
-          //  putExtra(Info_Extra_Mensagem, mensagem)
+        val intent = Intent(this, MostrarDadosActivity::class.java).apply {
+
+            putExtra(Info_Extra_Nome, nome)
+            putExtra(Info_Extra_Mail, mail)
 
         }
 

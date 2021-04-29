@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTelemovel" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutNome"
         android:layout_width="match_parent"
@@ -26,9 +16,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome" />
+            android:hint="@string/nome" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -40,9 +31,10 @@
         tools:layout_editor_absoluteX="66dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mail" />
+            android:hint="@string/mail" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -54,9 +46,10 @@
         tools:layout_editor_absoluteX="130dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditIdade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Idade" />
+            android:hint="@string/idade" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -68,9 +61,21 @@
         tools:layout_editor_absoluteX="119dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextInputEditTelemovel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Telemóvel" />
+            android:hint="@string/telem_vel" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="mostrarDados"
+        android:text="@string/enviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTelemovel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

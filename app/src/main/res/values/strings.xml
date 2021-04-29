@@ -2,4 +2,9 @@
     <string name="app_name">ExLerDados</string>
     <string name="textview">TextView</string>
     <string name="button">Button</string>
+    <string name="nome">Nome</string>
+    <string name="mail">Mail</string>
+    <string name="idade">Idade</string>
+    <string name="enviar">Enviar</string>
+    <string name="telem_vel">Telemóvel</string>
 </resources>
