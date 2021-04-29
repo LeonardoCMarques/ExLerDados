@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object{
-        val Info_Extra_Nome = "Nome"
-        val Info_Extra_Mail = "Mail"
-
+        const val Info_Extra_Nome = "Nome"
+        const val Info_Extra_Mail = "Mail"
+        const val Info_Extra_Idade = "Idade"
     }
 
     fun mostrarDados(view: View) {
@@ -29,10 +29,14 @@ class MainActivity : AppCompatActivity() {
         val TextInputEditMail = findViewById<EditText>(R.id.TextInputEditMail)
         val mail = TextInputEditMail.text.toString()
 
+        val TextInputEditIdade = findViewById<EditText>(R.id.TextInputEditIdade)
+        val idade = TextInputEditIdade.text.toString()
+
         val intent = Intent(this, MostrarDadosActivity::class.java).apply {
 
             putExtra(Info_Extra_Nome, nome)
             putExtra(Info_Extra_Mail, mail)
+            putExtra(Info_Extra_Idade, idade)
 
         }
 

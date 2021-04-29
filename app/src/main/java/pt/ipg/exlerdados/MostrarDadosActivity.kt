@@ -11,11 +11,15 @@ class MostrarDadosActivity : AppCompatActivity() {
 
         val nome = intent.getStringExtra(MainActivity.Info_Extra_Nome)
         val mail = intent.getStringExtra(MainActivity.Info_Extra_Mail)
+        val idade = intent.getStringExtra(MainActivity.Info_Extra_Idade)
 
         val textViewNome = findViewById<TextView>(R.id.textViewNome)
         textViewNome.setText(nome)
 
         val textViewMail = findViewById<TextView>(R.id.textViewMail)
         textViewMail.setText(mail)
+
+        val textViewIdade = findViewById<TextView>(R.id.textViewIdade)
+        textViewIdade.setText(idade)
     }
 }
