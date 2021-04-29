@@ -36,6 +36,11 @@ class MainActivity : AppCompatActivity() {
         val TextInputEditTelemovel = findViewById<EditText>(R.id.TextInputEditTelemovel)
         val telemovel = TextInputEditTelemovel.text.toString()
 
+        if(nome.isBlank()){
+            TextInputEditNome.error = "Insira o seu nome"
+            return
+        }
+
         val intent = Intent(this, MostrarDadosActivity::class.java).apply {
 
             putExtra(Info_Extra_Nome, nome)
