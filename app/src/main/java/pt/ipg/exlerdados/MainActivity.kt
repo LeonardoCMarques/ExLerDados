@@ -41,6 +41,11 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
+        if(mail.isBlank()){
+            TextInputEditMail.error = "Insira o seu e-mail"
+            return
+        }
+
         val intent = Intent(this, MostrarDadosActivity::class.java).apply {
 
             putExtra(Info_Extra_Nome, nome)
