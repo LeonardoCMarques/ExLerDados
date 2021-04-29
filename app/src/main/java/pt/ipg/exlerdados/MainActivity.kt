@@ -51,6 +51,11 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
+        if(telemovel.isBlank()){
+            TextInputEditTelemovel.error = "Insira o seu numero de telemóvel"
+            return
+        }
+
         val intent = Intent(this, MostrarDadosActivity::class.java).apply {
 
             putExtra(Info_Extra_Nome, nome)
