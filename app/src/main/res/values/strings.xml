@@ -7,4 +7,5 @@
     <string name="idade">Idade</string>
     <string name="enviar">Enviar</string>
     <string name="telem_vel">Telemóvel</string>
+    <string name="submeter">Submeter</string>
 </resources>
