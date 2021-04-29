@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         const val Info_Extra_Nome = "Nome"
         const val Info_Extra_Mail = "Mail"
         const val Info_Extra_Idade = "Idade"
+        const val Info_Extra_Telemovel = "Telemovel"
     }
 
     fun mostrarDados(view: View) {
@@ -32,11 +33,15 @@ class MainActivity : AppCompatActivity() {
         val TextInputEditIdade = findViewById<EditText>(R.id.TextInputEditIdade)
         val idade = TextInputEditIdade.text.toString()
 
+        val TextInputEditTelemovel = findViewById<EditText>(R.id.TextInputEditTelemovel)
+        val telemovel = TextInputEditTelemovel.text.toString()
+
         val intent = Intent(this, MostrarDadosActivity::class.java).apply {
 
             putExtra(Info_Extra_Nome, nome)
             putExtra(Info_Extra_Mail, mail)
             putExtra(Info_Extra_Idade, idade)
+            putExtra(Info_Extra_Telemovel, telemovel)
 
         }
 
