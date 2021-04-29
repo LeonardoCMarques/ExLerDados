@@ -46,6 +46,11 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
+        if(idade.isBlank()){
+            TextInputEditIdade.error = "Insira a sua idade"
+            return
+        }
+
         val intent = Intent(this, MostrarDadosActivity::class.java).apply {
 
             putExtra(Info_Extra_Nome, nome)
