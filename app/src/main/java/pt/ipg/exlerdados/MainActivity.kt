@@ -40,33 +40,25 @@ class MainActivity : AppCompatActivity() {
             TextInputEditNome.error = "Insira o seu nome"
             return
         }
-
         if(mail.isBlank()){
             TextInputEditMail.error = "Insira o seu e-mail"
             return
         }
-
         if(idade.isBlank()){
             TextInputEditIdade.error = "Insira a sua idade"
             return
         }
-
         if(telemovel.isBlank()){
-            TextInputEditTelemovel.error = "Insira o seu numero de telemóvel"
+            TextInputEditTelemovel.error = "Insira o seu número de telemóvel"
             return
         }
 
         val intent = Intent(this, MostrarDadosActivity::class.java).apply {
-
             putExtra(Info_Extra_Nome, nome)
             putExtra(Info_Extra_Mail, mail)
             putExtra(Info_Extra_Idade, idade)
             putExtra(Info_Extra_Telemovel, telemovel)
-
         }
-
         startActivity(intent)
-
     }
-
 }
